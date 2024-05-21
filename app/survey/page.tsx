@@ -80,20 +80,6 @@ export default function Survey() {
       cuisines: cuisines.join(","),
       price: price.join(","),
     });
-    // try {
-    //   const response = await fetch(
-    //     `/api/restaurants?location=${location}&categories=${cuisines.join(
-    //       ","
-    //     )}&price=${price.join(",")}`
-    //   );
-    //   if (!response.ok) {
-    //     throw new Error("Network response was not ok");
-    //   }
-    //   const data = await response.json();
-    //   console.log(data);
-    // } catch (error) {
-    //   console.error("Error fetching restaurants");
-    // }
 
     try {
       const response = await fetch("api/restaurants?" + params);
@@ -181,7 +167,7 @@ export default function Survey() {
               <div className="mb-4">
                 <FormLabel className="text-base">How Much?</FormLabel>
                 <FormDescription>
-                  Select the prices you'd be down to spend.
+                  Select the prices you&pos;d be down to spend.
                 </FormDescription>
               </div>
               {price.map((price) => (
